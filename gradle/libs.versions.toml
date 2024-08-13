@@ -1,0 +1,72 @@
+[versions]
+agp = "8.5.1"
+kotlin = "2.0.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.4"
+ksp = "2.0.0-1.0.21"
+activityCompose = "1.9.1"
+composeBomVersion = "2024.06.00"
+composeVersion = "1.9.0"
+dagger = "2.51.1"
+daggerCompiler = "2.51.1"
+composeUiAndFoundationRuntimeVersion = "1.6.8"
+composeLifecycleVersion = "2.8.3"
+composeNavigationVersion = "2.7.7"
+composeHiltNavigationVersion = "1.2.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+media3Common = "1.4.0"
+
+[libraries]
+composeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBomVersion" }
+composeActivity = { group = "androidx.activity", name = "activity-compose", version.ref = "composeVersion" }
+composeUi = { group = "androidx.compose.ui", name = "ui", version.ref = "composeUiAndFoundationRuntimeVersion" }
+composeGraphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+composeMaterial = { group = "androidx.compose.material3", name = "material3" }
+composeLifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "composeLifecycleVersion" }
+composeFoundation = { group = "androidx.compose.foundation", name = "foundation-layout-android", version.ref = "composeUiAndFoundationRuntimeVersion" }
+composeRuntime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "composeUiAndFoundationRuntimeVersion" }
+composeRuntimeLivedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "composeUiAndFoundationRuntimeVersion" }
+composeRuntimeRxJava2 = { group = "androidx.compose.runtime", name = "runtime-rxjava2", version.ref = "composeUiAndFoundationRuntimeVersion" }
+composeNavigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigationVersion" }
+composeHiltNavigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "composeHiltNavigationVersion" }
+composeUiTooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+composeUiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+androidx-media3-common = { group = "androidx.media3", name = "media3-common", version.ref = "media3Common" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger" }
+hiltCompiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerCompiler" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+daggerHilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
+
+
+[bundles]
+compose = ["composeBom", "composeActivity", "composeUi", "composeGraphics", "composeMaterial", "composeLifecycle", "composeFoundation", "composeRuntime", "composeRuntimeLivedata", "composeRuntimeRxJava2", "composeNavigation", "composeHiltNavigation", "composeUiTooling", "composeUiToolingPreview"]
